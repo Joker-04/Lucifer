@@ -21,7 +21,7 @@ from utils import get_size, is_req_subscribed, get_poster, search_gagala, temp, 
 from fuzzywuzzy import process
 from database.users_chats_db import db
 from database.config_db import mdb
-from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
+from database.ia_filterdb import Media, Media2, get_file_details, get_search_results, get_bad_files
 from database.filters_mdb import (
     del_all,
     find_filter,
@@ -80,7 +80,7 @@ async def get_shortlink(url):
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    await message.react(emoji=random.choice(REACTIONS), big=True)
+    #await message.react(emoji=random.choice(REACTIONS), big=True)
     await mdb.update_top_messages(message.from_user.id, message.text)
     if message.chat.id != SUPPORT_CHAT_ID:
         manual = await manual_filters(client, message)
@@ -111,7 +111,7 @@ async def pm_text(bot, message):
     content = message.text
     user = message.from_user.first_name
     user_id = message.from_user.id
-    await message.react(emoji=random.choice(REACTIONS), big=True)
+    #await message.react(emoji=random.choice(REACTIONS), big=True)
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if PM_SEARCH:
         await auto_filter(bot, message)
@@ -1191,7 +1191,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data.startswith("killfilesdq"):
         ident, keyword = query.data.split("#")
-        #await query.message.edit_text(f"<b>Fetching Files for your query {keyword} on DB... Please wait...</b>")
+        await query.message.edit_text(f"<b>Fetching Files for your query {keyword} on DB... Please wait...</b>")
         files, total = await get_bad_files(keyword)
         await query.message.edit_text("<b>ꜰɪʟᴇ ᴅᴇʟᴇᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ᴡɪʟʟ ꜱᴛᴀʀᴛ ɪɴ 5 ꜱᴇᴄᴏɴᴅꜱ !</b>")
         await asyncio.sleep(5)
@@ -1204,6 +1204,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     result = await Media.collection.delete_one({
                         '_id': file_ids,
                     })
+                    if not result.deleted_count:
+                        result = await Media2.collection.delete_one({
+                            '_id': file_ids,
+                        })
                     if result.deleted_count:
                         logger.info(f'ꜰɪʟᴇ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {keyword}! ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ {file_name} ꜰʀᴏᴍ ᴅᴀᴛᴀʙᴀꜱᴇ.')
                     deleted += 1
@@ -1286,6 +1290,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                          callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}'),
                     InlineKeyboardButton('ᴇɴᴀʙʟᴇ' if settings["is_shortlink"] else 'ᴅɪꜱᴀʙʟᴇ',
                                          callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}')
+                ],[
+                InlineKeyboardButton('ᴠᴇʀɪғʏ', callback_data=f'setgs#is_verify#{settings["is_verify"]}#{grp_id}'),
+                InlineKeyboardButton('ᴏɴ ✓' if settings["is_verify"] else 'ᴏғғ ✗', callback_data=f'setgs#is_verify#{settings["is_verify"]}#{grp_id}')
                 ],
                 [
                     InlineKeyboardButton('⇋ ᴄʟᴏꜱᴇ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ ⇋', 
@@ -1378,6 +1385,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                          callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}'),
                     InlineKeyboardButton('ᴇɴᴀʙʟᴇ' if settings["is_shortlink"] else 'ᴅɪꜱᴀʙʟᴇ',
                                          callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}')
+                ],[
+                InlineKeyboardButton('ᴠᴇʀɪғʏ', callback_data=f'setgs#is_verify#{settings["is_verify"]}#{grp_id}'),
+                InlineKeyboardButton('ᴏɴ ✓' if settings["is_verify"] else 'ᴏғғ ✗', callback_data=f'setgs#is_verify#{settings["is_verify"]}#{grp_id}')
                 ],
                 [
                     InlineKeyboardButton('⇋ ᴄʟᴏꜱᴇ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ ⇋', 
@@ -1986,7 +1996,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🎞 Mᴏᴠɪᴇ Gʀᴏᴜᴘ ', url=GRP_LNK),
             InlineKeyboardButton('➤ Cᴏɴᴛᴀᴄᴛ ', url=OWNER_LNK)
         ],[
-            InlineKeyboardButton('🗣 Mᴏᴠɪᴇ Nᴏᴛɪғɪᴄᴀᴛɪᴏɴ ', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK),
+            InlineKeyboardButton('🗣📢 Mᴏᴠɪᴇ Nᴏᴛɪғɪᴄᴀᴛɪᴏɴ ', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK),
             InlineKeyboardButton('☸️ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ', url=CHNL_LNK)
         ],[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='start')

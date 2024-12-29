@@ -3,11 +3,18 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
 from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, OWNER_LNK, MELCOW_NEW_USERS, MELCOW_VID
 from database.users_chats_db import db, db2
-from database.ia_filterdb import Media
-from utils import get_size, temp, get_settings
+from database.ia_filterdb import Media, Media2
+from utils import get_size, temp, get_settings, get_readable_time
 from Script import script
 from pyrogram.errors import ChatAdminRequired
-import asyncio 
+import asyncio
+import psutil
+import time
+from time import time
+from bot import botStartTime
+
+
+
 
 """-----------------------------------------https://t.me/Deendayal_dhakad--------------------------------------"""
 
@@ -155,16 +162,23 @@ async def get_ststs(bot, message):
     rju = await message.reply('ᴀᴄᴄᴇꜱꜱɪɴɢ ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ...')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
+    premium = await db.all_premium_users()
+    file = await Media.count_documents()
     size = await db.get_db_size()
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    files = await Media.count_documents()
+    files = await Media2.count_documents()
     size2 = await db2.get_db_size()
     free2 = 536870912 - size2
     size2 = get_size(size2)
     free2 = get_size(free2)
-    await rju.edit(script.STATUS_TXT.format(total_users, totl_chats, size, free, files, size2, free2))
+    uptime = get_readable_time(time() - botStartTime)
+    # uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - time.time()))
+    ram = psutil.virtual_memory().percent
+    cpu = psutil.cpu_percent()
+    await rju.edit(script.STATUS_TXT.format(total_users, totl_chats, premium, file, size, free, files, size2, free2, uptime, ram, cpu, (int(file)+int(files)) ))
+
 
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))

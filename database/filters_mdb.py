@@ -8,8 +8,6 @@ logger.setLevel(logging.ERROR)
 myclient = pymongo.MongoClient(DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
 
-
-
 async def add_filter(grp_id, text, reply_text, btn, file, alert):
     mycol = mydb[str(grp_id)]
 
@@ -20,13 +18,11 @@ async def add_filter(grp_id, text, reply_text, btn, file, alert):
         'file':str(file),
         'alert':str(alert)
     }
-
     try:
         mycol.update_one({'text': str(text)},  {"$set": data}, upsert=True)
     except:
         logger.exception('Some error occured!', exc_info=True)
-             
-     
+               
 async def find_filter(group_id, name):
     mycol = mydb[str(group_id)]
     
@@ -44,7 +40,6 @@ async def find_filter(group_id, name):
     except:
         return None, None, None, None
 
-
 async def get_filters(group_id):
     mycol = mydb[str(group_id)]
 
@@ -57,7 +52,6 @@ async def get_filters(group_id):
     except:
         pass
     return texts
-
 
 async def delete_filter(message, text, group_id):
     mycol = mydb[str(group_id)]
@@ -74,7 +68,6 @@ async def delete_filter(message, text, group_id):
     else:
         await message.reply_text("Couldn't find that filter!", quote=True)
 
-
 async def del_all(message, group_id, title):
     if str(group_id) not in mydb.list_collection_names():
         await message.edit_text(f"Nothing to remove in {title}!")
@@ -88,13 +81,11 @@ async def del_all(message, group_id, title):
         await message.edit_text("Couldn't remove all filters from group!")
         return
 
-
 async def count_filters(group_id):
     mycol = mydb[str(group_id)]
 
     count = mycol.count()
     return False if count == 0 else count
-
 
 async def filter_stats():
     collections = mydb.list_collection_names()

@@ -1,6 +1,6 @@
 
 import motor.motor_asyncio
-from info import DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL
+from info import DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL, VERIFY
 import datetime
 import pytz  
 from pymongo.errors import DuplicateKeyError
@@ -173,7 +173,8 @@ class Database:
             'shortlink_api': SHORTLINK_API,
             'is_shortlink': IS_SHORTLINK,
             'tutorial': TUTORIAL,
-            'is_tutorial': IS_TUTORIAL
+            'is_tutorial': IS_TUTORIAL,
+            'is_verify': VERIFY,
         }
         chat = await self.grp.find_one({'id':int(id)})
         if chat:
@@ -254,6 +255,12 @@ class Database:
         expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
         user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
         await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
+
+    async def all_premium_users(self):
+        count = await self.users.count_documents({
+        "expiry_time": {"$gt": datetime.datetime.now()}
+        })
+        return count    
         
 db = Database(DATABASE_URI, DATABASE_NAME)
 db2 = Database(DATABASE_URI2, DATABASE_NAME)
