@@ -266,7 +266,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/Deendayal_dhakad">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a href=https://t.me/Deendayal_dhakad>[Deendayal_Dhakad]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/Joker_offical0">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a href=https://t.me/Joker_offical0>[𝓙𝓞𝓚𝓔𝓡]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
@@ -355,7 +355,7 @@ BOT WORKING PROPERLY"""
 ○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs
 ○ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ
 
-👨‍💻 ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ <a href='https://t.me/Sorry_Sorry_Galti_Ho_Gai'>Owner</a> ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴛʀɪᴀʟ.
+👨‍💻 ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ <a href='https://t.me/I_am_Owner_04'>Owner</a> ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴛʀɪᴀʟ.
 
 ➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
 ➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
@@ -372,7 +372,7 @@ BOT WORKING PROPERLY"""
     SILVER_TXT = """<b>👋 ʜᴇʏ {},
     
 🥈 <u>ꜱɪʟᴠᴇʀ ᴘʟᴀɴ</u>
-⏰ 15 ᴅᴀʏꜱ 
+⏰ 20 ᴅᴀʏꜱ 
 💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 20₹
 
 ➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
@@ -382,7 +382,7 @@ BOT WORKING PROPERLY"""
     
 🥇 <u>ɢᴏʟᴅ ᴘʟᴀɴ</u>
 ⏰ 30 ᴅᴀʏꜱ 
-💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 40₹
+💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 30₹
 
 ➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
 ➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
@@ -391,7 +391,7 @@ BOT WORKING PROPERLY"""
     
 🏅 <u>ᴘʟᴀᴛɪɴᴜᴍ ᴘʟᴀɴ</u>
 ⏰ 45 ᴅᴀʏꜱ 
-💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 55₹
+💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 45₹
 
 ➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
 ➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
@@ -400,7 +400,7 @@ BOT WORKING PROPERLY"""
 
 💎 <u>ᴅɪᴀᴍᴏɴᴅ ᴘʟᴀɴ</u>
 ⏰ 60 ᴅᴀʏꜱ 
-💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 75₹
+💸 ᴘʟᴀɴ ᴘʀɪᴄᴇ ➛ 60₹
 
 ➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
 ➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
@@ -440,13 +440,13 @@ BOT WORKING PROPERLY"""
 
 <blockquote>⚜️ 10 𝑹𝒖𝒑𝒂𝒚𝒆 👉 7 𝒅𝒂𝒚𝒔
 
-⚜️ 20 𝑹𝒖𝒑𝒂𝒚𝒆 👉 15 𝒅𝒂𝒚𝒔 
+⚜️ 20 𝑹𝒖𝒑𝒂𝒚𝒆 👉 20 𝒅𝒂𝒚𝒔 
 
-⚜️ 40 𝑹𝒖𝒑𝒂𝒚𝒆 👉 30 𝒅𝒂𝒚𝒔 
+⚜️ 30 𝑹𝒖𝒑𝒂𝒚𝒆 👉 30 𝒅𝒂𝒚𝒔 
 
-⚜️ 55 𝑹𝒖𝒑𝒂𝒚𝒆 👉 45 𝒅𝒂𝒚𝒔 
+⚜️ 45 𝑹𝒖𝒑𝒂𝒚𝒆 👉 45 𝒅𝒂𝒚𝒔 
 
-⚜️ 75 𝑹𝒖𝒑𝒂𝒚𝒆 👉 60 𝒅𝒂𝒚𝒔</blockquote>
+⚜️ 60 𝑹𝒖𝒑𝒂𝒚𝒆 👉 60 𝒅𝒂𝒚𝒔</blockquote>
 
 𝑺𝒆𝒍𝒆𝒄𝒕 𝒀𝒐𝒖𝒓 𝑷𝒂𝒚𝒎𝒆𝒏𝒕 𝑴𝒆𝒕𝒉𝒐𝒅.....
 
