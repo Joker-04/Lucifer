@@ -266,7 +266,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/Joker_offical0">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a href=https://t.me/Joker_offical0>[𝓙𝓞𝓚𝓔𝓡]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/Joker_offical0">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a href=https://t.me/Joker_offical0>[ 𝓙𝓞𝓚𝓔𝓡 ]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
