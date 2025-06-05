@@ -422,7 +422,7 @@ BOT WORKING PROPERLY"""
     
  ᴘᴀʏ ᴀᴍᴍᴏᴜɴᴛ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ᴘʟᴀɴ ᴀɴᴅ ᴇɴᴊᴏʏ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ !
 
-💵 ᴜᴘɪ ɪᴅ - <code>deendayaldhaked@ybl</code>
+💵 ᴜᴘɪ ɪᴅ - <code>XyzxYzxyZ@ibl</code>
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.</b>"""
 
@@ -430,7 +430,7 @@ BOT WORKING PROPERLY"""
     
  ᴘᴀʏ ᴀᴍᴍᴏᴜɴᴛ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ᴘʟᴀɴ ᴀɴᴅ ᴇɴᴊᴏʏ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ !
 
-📸 ǫʀ ᴄᴏᴅᴇ - <a href='https://graph.org/file/e419f801841c2ee3db0fc.jpg'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ</a>
+📸 ǫʀ ᴄᴏᴅᴇ - <a href='https://envs.sh/g4F.jpg'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ</a>
 
 ‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.</b>"""
 
@@ -452,7 +452,7 @@ BOT WORKING PROPERLY"""
 
 𝑼𝑷𝑰 𝑰𝑫 👉 <code>deendayaldhaked@ybl</code>
 
-𝑸𝑹 𝒄𝒐𝒅𝒆 👉 <a href='https://graph.org/file/e419f801841c2ee3db0fc.jpg'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ</a> 
+𝑸𝑹 𝒄𝒐𝒅𝒆 👉 <a href='https://envs.sh/g4F.jpg'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ</a> 
 
 𝑷𝒂𝒚 𝑨𝒎𝒐𝒖𝒏𝒕 𝑨𝒄𝒄𝒐𝒓𝒅𝒊𝒏𝒈 𝑻𝒐 𝒀𝒐𝒖𝒓 𝑷𝒍𝒂𝒏 & 𝑬𝒏𝒋𝒐𝒚 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 𝑴𝒆𝒎𝒃𝒆𝒓𝒔𝒉𝒊𝒑
 
