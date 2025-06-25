@@ -70,9 +70,9 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 #Channel & Group link 
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/groupchatrequest')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Joker_offical0')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/FilmyEraOfficial')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/I_am_Owner_04')
-DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK = environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/Joker_offical0')
+DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK = environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/FilmyEraOfficial')
 
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
